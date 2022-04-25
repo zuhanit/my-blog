@@ -1,0 +1,387 @@
+html, body, main {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4ca6ff;
+}
+
+a:link {
+    color:#4ca6ff;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    min-width: 0;
+}
+
+.top-navigation {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    height: 4rem;
+    min-width: 0;
+}
+
+.top-navigation-logo {
+    flex-grow: 1;
+    color: transparent;
+}
+
+.logo {
+    animation: logo-gradient 2s ease-in-out;
+    background: linear-gradient(to right, rgb(59, 245, 255), rgb(121, 121, 255));
+    background-clip: text;
+    transition: color .2s ease-in-out;
+}
+
+.logo:hover {
+    color: transparent;
+}
+
+@keyframes logo-gradient {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
+.top-navigation-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.search {
+    display: flex;
+}
+
+.search-form {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+}
+
+.search-result {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 10em;
+    top: 25px;
+    border: 1px solid #696969;
+    border-radius: 0.25rem;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+}
+
+.search-result > p {
+    background-color: transparent;
+}
+
+.result-item[aria-selected="true"] {
+    background-color: rgb(39, 39, 39);
+}
+
+.result-item {
+    font-size: 0.833rem;
+    border: 0.1em solid #696969;
+    padding: 0.3rem;
+}
+
+mark {
+    background-color: #004d92;
+    color: white;
+}
+
+.search-result > a:link {
+    color: white;
+}
+
+.search-result > a:visited {
+    color: white;
+}
+
+.search-button {
+    display: flex;
+    position: relative;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-bar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-width: 0;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 0px 5px white;
+    min-width: 0;
+    top: calc(6%)
+}
+
+.dropdown-bar:hover > .menu-list {
+    display: block;
+    margin: 0px;
+    padding: 8px;
+}
+
+.menu-list > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-list > li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-body {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    flex: 1 0 100vh;
+}
+
+.shortcut {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.shortcut-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.banner-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.skeleton-banner {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 25%;
+    min-height: 50px;
+    max-height: 50px;
+    animation: skeleton-gradient 1.8s infinite;
+}
+
+.banners {
+    display: flex;
+    gap: 3px;
+}
+
+.banner > h2 {
+    color: white;
+}
+
+.banner > p {
+    color: white;
+    max-height: 8rem;
+    overflow: hidden;
+}
+
+.files {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.files-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.files-item > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.files-item > .img-cat {
+    background-image: url(Images/cat.webp);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.files-item > .img-eps {
+    background-image: url(Images/offset.gif);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.files-item > a {
+    color: #4ca6ff;
+}
+
+.footer-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.grey {
+    color: rgb(180, 180, 180)
+}
+
+.gap-5px {
+    gap: 5px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 0;
+    font-size: 0.833em;
+}
+
+.post > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post > .title > h1 {
+    background: linear-gradient(to right, rgb(59, 245, 255), rgb(121, 121, 255));
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+}
+
+.post > .title > .skeleton-title {
+    width: 70%;
+    height: 1.5em;
+    animation: skeleton-gradient 1.8s infinite;
+    margin: 0.83em 0;
+}
+
+.post > .title > .skeleton-subtitle {
+    width: 70%;
+    height: 1em;
+    animation: skeleton-gradient 1.8s infinite;
+}
+
+.post > .content > .skeleton-content {
+    width: 100%;
+    height: 1rem;
+    animation: skeleton-gradient 1.8s infinite;
+    margin-bottom: 0.5rem;
+}
+
+span[class="grey"] {
+    color:rgb(168, 168, 168);
+}
+
+@keyframes skeleton-gradient {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+}
